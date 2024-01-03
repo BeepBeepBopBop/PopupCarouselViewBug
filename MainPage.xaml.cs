@@ -4,6 +4,8 @@ namespace MauiApp6
 {
     public partial class MainPage : ContentPage
     {
+        int count = 0;
+
         public MainPage()
         {
             InitializeComponent();
@@ -18,8 +20,18 @@ namespace MauiApp6
                 VerticalOptions = Microsoft.Maui.Primitives.LayoutAlignment.Center
             };
 
-            // App is freezed after this called.
+            // App is frozen after this call.
             var result = await Shell.Current.ShowPopupAsync(timerValuePopup);
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            count++;
+
+            if (count == 1)
+                CounterBtn.Text = $"Clicked {count} time";
+            else
+                CounterBtn.Text = $"Clicked {count} times";
         }
     }
 }

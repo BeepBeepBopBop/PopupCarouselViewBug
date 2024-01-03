@@ -5,8 +5,9 @@
              x:DataType="local:TimerValuePopupViewModel"
              x:Class="MauiApp6.MainPage">
 
-    <Grid>
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
+        <Button x:Name="CounterBtn" Text="Click me" Clicked="Button_Clicked_1"/>
         <Button HorizontalOptions="Center" VerticalOptions="Center" Text="Open popup" Clicked="Button_Clicked"/>
-    </Grid>
+    </VerticalStackLayout>
 
 </ContentPage>
