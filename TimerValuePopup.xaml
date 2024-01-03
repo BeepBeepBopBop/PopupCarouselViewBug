@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:local="clr-namespace:MauiApp6"
+               x:Class="MauiApp6.TimerValuePopup"
+               x:DataType="local:TimerValuePopupViewModel"
+               x:Name="timerValuePopup"
+               Color="DimGray"
+               CanBeDismissedByTappingOutsideOfPopup="True">
+
+    <CarouselView WidthRequest="80" HeightRequest="200" x:Name="carouselMinutes"  ItemsSource="{Binding Values}">
+        <CarouselView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
+        </CarouselView.ItemsLayout>
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <Label VerticalOptions="Center" HorizontalOptions="Center"  FontSize="40" Text="AAAAAAA" />
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+</toolkit:Popup>
+
